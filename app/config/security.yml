@@ -1,11 +1,19 @@
-# To get started with security, check out the documentation:
-# https://symfony.com/doc/current/security.html
 security:
+    encoders:
+        Symfony\Component\Security\Core\User\User:
+            algorithm: bcrypt
+            cost: 12
 
-    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
         in_memory:
-            memory: ~
+            memory:
+                users:
+                    ryan:
+                        password: $2y$12$mkf3iFYCVcm3ZDjY28YHgur39mKbzyiSwlAnuZn1eB2XpVTLnPlDG
+                        roles: 'ROLE_USER'
+                    admin:
+                        password: $2y$12$sNzYQnfFRHz.z3fzHZc25OZsTSHvyHdH6C8GD1k7g2K4S9KBNrbLq
+                        roles: 'ROLE_ADMIN'
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -19,6 +27,10 @@ security:
             form_login:
                 login_path: login
                 check_path: login
+            logout:
+                path:   /logout
+                target: /
+                    
     
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
