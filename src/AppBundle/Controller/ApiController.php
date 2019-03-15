@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use FOS\RestBundle\View\View;
 use AppBundle\Entity\User;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class ApiController extends FOSRestController
 {
@@ -40,12 +41,13 @@ class ApiController extends FOSRestController
     * @Rest\Post("/api/user")
     */
 
-    public function createUserAction(Request $request)
+    public function createUserAction(Request $request, UserPasswordEncoderInterface $encoder)
     {
         $user = new User;
         $name = $request->get('name');
         $username = $request->get('username');
-        $password = $request->get('password');
+        
+        $password = $encoder->encodePassword($user, $request->get('password'));
         $roles = $request->get('roles');
 
         $user->setName($name);

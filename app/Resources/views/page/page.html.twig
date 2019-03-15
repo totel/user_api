@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block title %}Página {{page}}{% endblock %}
+{% block body %}
+    <div class="container-fluid">
+        <h1>Hello {{page}} {{ app.user.username }}</h1>
+        <a class="btn btn-outline-danger" href="{{path('logout')}}" role="button">Cerrar sesión</a>
+        <a class="btn btn-outline-primary" href="{{path('homepage')}}" role="button">Inicio</a>
+    </div>
+
+{% endblock %}

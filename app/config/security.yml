@@ -1,19 +1,16 @@
 security:
     encoders:
-        Symfony\Component\Security\Core\User\User:
+        AppBundle\Entity\User:
             algorithm: bcrypt
-            cost: 12
 
     providers:
-        in_memory:
-            memory:
-                users:
-                    ryan:
-                        password: $2y$12$mkf3iFYCVcm3ZDjY28YHgur39mKbzyiSwlAnuZn1eB2XpVTLnPlDG
-                        roles: 'ROLE_USER'
-                    admin:
-                        password: $2y$12$sNzYQnfFRHz.z3fzHZc25OZsTSHvyHdH6C8GD1k7g2K4S9KBNrbLq
-                        roles: 'ROLE_ADMIN'
+        db_provider:
+            entity:
+                class: AppBundle:User
+                property: username
+    
+    role_hierarchy:
+        ROLE_ADMIN:        [ROLE_PAGE1, ROLE_PAGE2]
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -24,6 +21,7 @@ security:
         main:
             anonymous: ~
             http_basic: ~
+            provider: db_provider
             form_login:
                 login_path: login
                 check_path: login
@@ -34,4 +32,6 @@ security:
     
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api, roles: ROLE_ADMIN }
+        - { path: ^/page/1, roles: ROLE_PAGE1 }
+        - { path: ^/page/2, roles: ROLE_PAGE2 }
+        # - { path: ^/api, roles: ROLE_ADMIN }
