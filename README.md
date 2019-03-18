@@ -27,7 +27,8 @@ GET user
 > /api/user/{user_id}
 
 CREATE user
-> /api/user <br />fields: name, surname, password roles (ROLE_ADMIN, ROLE_PAGE1, ROLE_PAGE2)
+> /api/user
+fields: name, surname, password y roles (ROLE_ADMIN, ROLE_PAGE1, ROLE_PAGE2)
 
 
 UPDATE user
