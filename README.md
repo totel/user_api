@@ -2,7 +2,7 @@ Prueba usuarios
 ========
 
 Prueba Rubén Díaz Barragán
-# Clonar proyecto en symfony y iniciar web server symfony
+# Clonar proyecto en symfony e iniciar web server symfony
 
 1.- `git clone https://github.com/totel/user_api.git`
 
