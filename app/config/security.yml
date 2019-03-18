@@ -10,7 +10,7 @@ security:
                 property: username
     
     role_hierarchy:
-        ROLE_ADMIN:        [ROLE_PAGE1, ROLE_PAGE2]
+        ROLE_ADMIN:        [ROLE_PAGE_1, ROLE_PAGE_2]
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -32,5 +32,5 @@ security:
     
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/page/1, roles: ROLE_PAGE1 }
-        - { path: ^/page/2, roles: ROLE_PAGE2 }
+        - { path: ^/page/1, roles: ROLE_PAGE_1 }
+        - { path: ^/page/2, roles: ROLE_PAGE_2 }
