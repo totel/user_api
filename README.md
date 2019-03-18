@@ -1,11 +1,10 @@
-user_api
+Prueba usuarios
 ========
 
 Prueba Rubén Díaz Barragán
-# clonar proyecto e iniciarlo
+# Clonar proyecto en symfony y iniciar web server symfony
 
-1.- Ejecutar 
-`git clone https://github.com/totel/user_api.git`
+1.- `git clone https://github.com/totel/user_api.git`
 
 2.- `composer install`
 
@@ -14,6 +13,14 @@ Prueba Rubén Díaz Barragán
 4.- Entrar en http://127.0.0.1:8000/
 
 # BBDD
+
+1.- Creamos BBDD y ponemos parametros en parameters.yml
+2.- Importamos el dump o creamos los usuarios a través de la API
+
+# API ENDPOINTS
+
+> /api/user
+
 
 
 
