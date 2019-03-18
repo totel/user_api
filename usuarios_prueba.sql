@@ -6,8 +6,8 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.0.1 (MySQL 5.6.17)
-# Base de datos: user_api
-# Tiempo de Generación: 2019-03-18 09:00:42 +0000
+# Base de datos: user_prueba
+# Tiempo de Generación: 2019-03-18 12:08:55 +0000
 # ************************************************************
 
 
@@ -40,10 +40,9 @@ LOCK TABLES `api_users` WRITE;
 
 INSERT INTO `api_users` (`id`, `name`, `username`, `password`, `roles`)
 VALUES
-	(8,'Admin','admin','$2y$13$nPXXzVPz5j5I1jTzBoByI.js4FDhE3mwA6Xeq8c.gjKZBsht1QySu','ROLE_ADMIN'),
-	(9,'User1','user1','$2y$13$QzTENiDek.D/aWgjUGy9QOrxm/piXsNmg.j3G2b9FS4RVF8ZPs9Hu','ROLE_PAGE1'),
-	(10,'User2','user2','$2y$13$MsStK8/KP8JLvrmPIvZxMuWbpWeS.BmIPY4fpp.yLC7cf4G8h7b3W','ROLE_PAGE2'),
-	(11,'User3','user3','$2y$13$V.zZ9nZg5GfCWpQUCdmcROiA8qy4jd7vnJS26YFXbYJbKAXAEGHby','ROLE_USER');
+	(1,'Admin','admin','$2y$13$0x3AxXzt2d94ur9oZ4/dUOr59Q7vQO/6ZKxKl.mF4ZxzWlRJtlvvq','ROLE_ADMIN'),
+	(2,'User1','user1','$2y$13$XCaiF5.uppV6vtgzZmMbR.9uT2ikmswrSzysgpLFqXm0HQuzWtMDa','ROLE_PAGE_1'),
+	(3,'User2','user2','$2y$13$8LWqqbwFFp72kJ12QF9msuadXejO/YKeQblU.IArY/0gYdQ9uNAHm','ROLE_PAGE_2');
 
 /*!40000 ALTER TABLE `api_users` ENABLE KEYS */;
 UNLOCK TABLES;
