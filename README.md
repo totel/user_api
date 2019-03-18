@@ -15,11 +15,26 @@ Prueba Rubén Díaz Barragán
 # BBDD
 
 1.- Creamos BBDD y ponemos parametros en parameters.yml
+
 2.- Importamos el dump o creamos los usuarios a través de la API
 
 # API ENDPOINTS
 
+GET users
 > /api/user
+
+GET user
+> /api/user/{user_id}
+
+CREATE user
+> /api/user <br />fields: name, surname, password roles (ROLE_ADMIN, ROLE_PAGE1, ROLE_PAGE2)
+
+
+UPDATE user
+> /api/user/{user_id}
+
+DELETE user
+> /api/user/{user_id}
 
 
 
