@@ -28,6 +28,7 @@ GET user
 
 CREATE user
 > /api/user
+
 fields: name, surname, password y roles (ROLE_ADMIN, ROLE_PAGE1, ROLE_PAGE2)
 
 
