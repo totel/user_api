@@ -38,6 +38,10 @@ UPDATE user
 DELETE user
 > /api/user/{user_id}
 
+# TEST
+
+`./vendor/bin/simple-phpunit`
+
 
 
 
